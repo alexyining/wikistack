@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="page-header">
+    <h1>Browse my Wikistack</h1>
+  </div>
+
+  <div class="menu">
+    
+      <!-- display tweets here -->
+  {% for tweet in tweets %}
+    <b>  <a href="/users/{{tweet.name}}">{{tweet.name}}</a>  </b>
+    <li>{{tweet.text}}</li>
+  {% endfor %}
+
+  </div>
+
+{% endblock %}
